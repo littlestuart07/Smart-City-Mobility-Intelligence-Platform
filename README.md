@@ -1,1101 +1,911 @@
-<div align="center">
+````markdown
+# 🏙️ Smart City Mobility Intelligence Platform
 
-# 🚦 Smart City Mobility Intelligence Platform
+<p align="center">
+  <img src="Urban_Pulse_Architecture_Diagram.png" alt="Smart City Mobility Intelligence Platform Architecture" width="900"/>
+</p>
 
-### 🌆 Multimodal Urban Mobility Analytics & Business Intelligence
+<p align="center">
+  <strong>Integrated Urban Mobility Analytics for Delhi & Bengaluru</strong>
+</p>
 
-<br>
+<p align="center">
+  An interactive Power BI-based platform for analyzing traffic, public transport, metro systems, ride-hailing, weather, demographics, and smart mobility indicators across two major Indian cities.
+</p>
 
-**🇮🇳 Delhi  •  🇮🇳 Bengaluru**
+<p align="center">
+  <img src="https://img.shields.io/badge/Power%20BI-Desktop-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
+  <img src="https://img.shields.io/badge/DAX-Analytics-512BD4?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Power%20Query-Data%20Transformation-217346?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Delhi-India-E95420?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Bengaluru-India-0F9D58?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Domain-Smart%20City%20Analytics-4285F4?style=for-the-badge"/>
+</p>
 
-**🚗 Traffic  •  🚌 Bus  •  🚇 Metro  •  🚲 Bike Sharing  •  🌦️ Weather  •  👥 Demographics**
+---
 
-<br><br>
+## 📌 Table of Contents
 
-[![Power BI](https://img.shields.io/badge/Power%20BI-Analytics-F2C811?style=for-the-badge\&logo=powerbi\&logoColor=black)](https://powerbi.microsoft.com/)
-[![DAX](https://img.shields.io/badge/DAX-KPI%20Analytics-107C41?style=for-the-badge)](https://learn.microsoft.com/dax/)
-[![Power Query](https://img.shields.io/badge/Power%20Query-ETL-217346?style=for-the-badge)](https://learn.microsoft.com/power-query/)
-[![Python](https://img.shields.io/badge/Python-Preprocessing-3776AB?style=for-the-badge\&logo=python\&logoColor=white)](https://www.python.org/)
-[![GTFS](https://img.shields.io/badge/GTFS-Transit%20Data-4285F4?style=for-the-badge)](https://gtfs.org/)
-[![Open-Meteo](https://img.shields.io/badge/Open--Meteo-Weather%20Data-4CAF50?style=for-the-badge)](https://open-meteo.com/)
-
-<br>
-
-[📊 Dashboard](#-dashboard)  • 
-[🏙️ Cities](#️-cities-covered)  • 
-[🏗️ Architecture](#️-system-architecture)  • 
-[📂 Data](#-data-ecosystem)  • 
-[🛠️ Tech Stack](#️-technology-stack)  • 
-[🚀 Getting Started](#-getting-started)
-
-</div>
+- [🌆 Project Overview](#-project-overview)
+- [🎯 Project Objectives](#-project-objectives)
+- [🏙️ Cities Covered](#️-cities-covered)
+- [🚦 Mobility Domains](#-mobility-domains)
+- [📊 Power BI Report](#-power-bi-report)
+- [🗂️ Report Pages](#️-report-pages)
+- [📥 Data Acquisition & Integration](#-data-acquisition--integration)
+- [🚌 Public Transport Analytics](#-public-transport-analytics)
+- [🚇 Metro Analytics](#-metro-analytics)
+- [🚦 Traffic Analytics](#-traffic-analytics)
+- [🚕 Ride-Hailing Analytics](#-ride-hailing-analytics)
+- [🚲 Bike-Sharing Analytics](#-bike-sharing-analytics)
+- [🌦️ Weather Analytics](#️-weather-analytics)
+- [👥 Demographic Analytics](#-demographic-analytics)
+- [⚖️ Delhi vs Bengaluru](#️-delhi-vs-bengaluru)
+- [📈 Key KPIs](#-key-kpis)
+- [🧮 Analytics & Calculations](#-analytics--calculations)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [🏗️ System Architecture](#️-system-architecture)
+- [🔄 Data Flow](#-data-flow)
+- [📁 Repository Structure](#-repository-structure)
+- [✨ Key Features](#-key-features)
+- [💡 Questions the Platform Answers](#-questions-the-platform-answers)
+- [🚀 Getting Started](#-getting-started)
+- [🎓 Skills Demonstrated](#-skills-demonstrated)
+- [🌍 Potential Applications](#-potential-applications)
+- [⚠️ Limitations](#️-limitations)
+- [🔮 Future Scope](#-future-scope)
+- [📚 Project Resources](#-project-resources)
+- [👨‍💻 Author](#-author)
 
 ---
 
 # 🌆 Project Overview
 
-> **Smart City Mobility Intelligence Platform** is an integrated Business Intelligence solution designed to analyze urban mobility across multiple transportation modes and supporting city-level datasets.
+The **Smart City Mobility Intelligence Platform** is an interactive business intelligence solution developed using **Microsoft Power BI** to analyze and understand urban mobility patterns across **Delhi and Bengaluru**.
 
-Modern cities generate transportation data from many independent systems. Traffic, buses, metro networks, bike sharing, weather, and demographic information often exist as separate datasets.
+Modern cities generate large volumes of mobility-related information through public transportation systems, traffic networks, metro services, ride-hailing platforms, weather conditions, demographic patterns, and other urban datasets.
 
-This project brings these data sources into a unified analytical environment using **Power BI**, supported by **Power Query, DAX, Python preprocessing, GTFS transit data, and weather data**.
+This project brings these different mobility dimensions together into a unified analytical environment.
 
-The platform currently covers:
+The platform enables users to explore:
 
-* 🇮🇳 Delhi
-* 🇮🇳 Bengaluru
+- 🚦 Traffic conditions
+- 🚌 Bus transportation
+- 🚇 Metro systems
+- 🚕 Ride-hailing activity
+- 🚲 Bike-sharing information
+- 🌦️ Weather conditions
+- 👥 Demographic characteristics
+- 🗺️ Transport infrastructure
+- 📊 Mobility performance indicators
+- ⚖️ Comparative mobility patterns between Delhi and Bengaluru
 
-and analyzes:
-
-* 🚗 Traffic conditions
-* 🚌 Bus transportation
-* 🚇 Metro networks
-* 🚲 Bike sharing
-* 🌦️ Weather
-* 👥 Demographics
-* 📍 Geographic transportation infrastructure
-
-The result is an interactive dashboard environment for exploring mobility patterns, transportation infrastructure, and key mobility indicators.
+The result is a **multi-page interactive Power BI report** designed to support exploration, comparison, and understanding of urban transportation systems.
 
 ---
 
 # 🎯 Project Objectives
 
-The platform was developed with the following objectives:
+The major objectives of the project are:
 
-### 01 — 📊 Data Integration
+### 1. 🚌 Analyze Public Transportation
 
-Bring multiple transportation and city datasets into a common analytical environment.
+Understand bus networks, routes, stops, trips, service patterns, and transportation infrastructure.
 
-### 02 — 🚗 Traffic Analysis
+### 2. 🚇 Analyze Metro Systems
 
-Analyze traffic-related variables such as speed, density, distance, travel time, road type, and weather conditions.
+Study metro networks, stations, ridership-related information, routes, passes, and usage patterns.
 
-### 03 — 🚌 Public Transport Analysis
+### 3. 🚦 Analyze Urban Traffic
 
-Study bus routes, stops, trips, and transportation network characteristics.
+Examine traffic density, speed, travel time, congestion-related indicators, road characteristics, and temporal patterns.
 
-### 04 — 🚇 Metro Analysis
+### 4. 🚕 Analyze Ride-Hailing Mobility
 
-Analyze metro stations, networks, and available ridership information.
+Explore ride-hailing bookings, operators, vehicle types, trip characteristics, fares, distances, and demand-related patterns.
 
-### 05 — 🚲 Micromobility Analysis
+### 5. 🌦️ Understand Weather-Mobility Relationships
 
-Include bike-sharing information as an additional urban transportation mode.
+Analyze how weather conditions can be examined alongside traffic and transportation activity.
 
-### 06 — 🌦️ Environmental Analysis
+### 6. 👥 Incorporate Demographic Context
 
-Analyze weather variables and their relationship with mobility-related data.
+Use demographic information to provide additional context for urban mobility analysis.
 
-### 07 — 🗺️ Geographic Analysis
+### 7. ⚖️ Compare Major Indian Cities
 
-Use geographic visualizations to understand the distribution of transportation infrastructure.
+Provide a dedicated analytical view for comparing mobility-related characteristics of:
 
-### 08 — 🧠 Executive Intelligence
+- Delhi
+- Bengaluru
 
-Transform detailed mobility data into KPIs and executive-level insights.
+### 8. 📊 Provide Executive-Level Insights
 
-### 09 — 🏙️ Multi-City Analysis
-
-Provide an analytical environment covering both **Delhi and Bengaluru**.
+Transform large datasets into interactive KPIs, charts, maps, and analytical views that can be explored through Power BI.
 
 ---
 
 # 🏙️ Cities Covered
 
-<div align="center">
+The platform contains dedicated analytical views for **two major Indian metropolitan cities**.
 
-|        City        | 🚗 Traffic | 🚌 Bus | 🚇 Metro | 🚲 Bike | 🌦️ Weather | 👥 Demographics | 📊 Power BI |
-| :----------------: | :--------: | :----: | :------: | :-----: | :---------: | :-------------: | :---------: |
-|   🇮🇳 **Delhi**   |      ✅     |    ✅   |     ✅    |    ✅    |      ✅      |        ✅        |      ✅      |
-| 🇮🇳 **Bengaluru** |      ✅     |    ✅   |     ✅    |    ✅    |      ✅      |        ✅        |      ✅      |
+| City | Coverage |
+|---|---|
+| 🇮🇳 Delhi | Traffic, Bus, Metro, Ride-Hailing, Weather, Demographics, Smart Mobility |
+| 🇮🇳 Bengaluru | Traffic, Bus, Metro, Ride-Hailing, Weather, Demographics, Smart Mobility |
 
-</div>
-
----
-
-## 🇮🇳 Delhi Mobility Ecosystem
-
-```text
-                     🇮🇳 DELHI
-                        │
-        ┌───────────────┼────────────────┐
-        │               │                │
-        ▼               ▼                ▼
-      🚗 Traffic      🚌 Bus           🚇 Metro
-        │               │                │
-        └───────────────┼────────────────┘
-                        │
-              ┌─────────┴─────────┐
-              ▼                   ▼
-          🚲 Bike Share        🌦️ Weather
-              │                   │
-              └─────────┬─────────┘
-                        ▼
-                 📊 POWER BI
-```
+The Power BI report contains **city-specific dashboards for both Delhi and Bengaluru**, along with a dedicated **Delhi vs Bengaluru** comparison page.
 
 ---
 
-## 🇮🇳 Bengaluru Mobility Ecosystem
+# 🚦 Mobility Domains
+
+The platform integrates multiple dimensions of urban mobility:
 
 ```text
-                   🇮🇳 BENGALURU
-                        │
-        ┌───────────────┼────────────────┐
-        │               │                │
-        ▼               ▼                ▼
-      🚗 Traffic      🚌 Bus           🚇 Metro
-        │               │                │
-        │               │          🚇 Ridership
-        │               │                │
-        └───────────────┼────────────────┘
-                        │
-              ┌─────────┴─────────┐
-              ▼                   ▼
-          🚲 Bike Share        🌦️ Weather
-              │                   │
-              └─────────┬─────────┘
-                        ▼
-                 📊 POWER BI
-```
-
----
-
-# 🔄 Multi-City Intelligence
-
-The project brings both cities into a common mobility-analysis perspective.
-
-```text
-                         🏙️ SMART CITY
-                           MOBILITY
+                         SMART CITY
+                    MOBILITY INTELLIGENCE
                               │
-                 ┌────────────┴────────────┐
-                 ▼                         ▼
-            🇮🇳 DELHI                🇮🇳 BENGALURU
-                 │                         │
-        ┌────────┼────────┐       ┌────────┼────────┐
-        ▼        ▼        ▼       ▼        ▼        ▼
-       🚗       🚌       🚇      🚗       🚌       🚇
-        │        │        │       │        │        │
-        └────────┼────────┘       └────────┼────────┘
-                 │                         │
-                 └────────────┬────────────┘
-                              ▼
-                       📊 POWER BI
-                              │
-                              ▼
-                    🧠 MOBILITY INSIGHTS
-```
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+       TRAFFIC             TRANSIT            METRO
+          │                   │                   │
+          │              ┌────┴────┐              │
+          │              │         │              │
+          │             BUS      ROUTES        STATIONS
+          │              │         │              │
+          └──────────────┼─────────┼──────────────┘
+                         │
+                 SMART MOBILITY
+                         │
+       ┌─────────────────┼─────────────────┐
+       │                 │                 │
+   RIDE-HAILING     BIKE SHARING       WEATHER
+       │                 │                 │
+       └─────────────────┼─────────────────┘
+                         │
+                    DEMOGRAPHICS
+                         │
+                         ▼
+                 EXECUTIVE INSIGHTS
+                         │
+                         ▼
+                 CITY COMPARISON
+````
 
 ---
 
-# ✨ Key Features
+# 📊 Power BI Report
 
-<div align="center">
-
-### 🚗 Traffic Intelligence
-
-**Speed • Density • Travel Time • Distance • Road Type • Weather**
-
-### 🚌 Transit Intelligence
-
-**Routes • Stops • Trips • Network Distribution**
-
-### 🚇 Metro Intelligence
-
-**Stations • Network • Ridership • Geographic Distribution**
-
-### 🚲 Micromobility
-
-**Bike Sharing • Stations • Mobility Data**
-
-### 🌦️ Environmental Intelligence
-
-**Temperature • Humidity • Rainfall • Wind Speed**
-
-### 🗺️ Geographic Intelligence
-
-**Bus Stops • Metro Stations • Transportation Networks**
-
-### 🧠 Executive Intelligence
-
-**KPIs • Mobility Health Score • Mobility Overview**
-
-</div>
-
----
-
-# 📊 Dashboard
-
-The project uses an interactive **Power BI dashboard** to transform the underlying datasets into visual analytics.
-
-The repository documents five main dashboard areas.
-
----
-
-## 01 — 🎯 Executive Dashboard
-
-The Executive Dashboard provides a high-level view of the mobility ecosystem.
-
-### Key areas
-
-* 📊 Mobility KPIs
-* 🚗 Traffic information
-* 🚌 Public transportation
-* 🚇 Metro information
-* 🌦️ Weather overview
-* 👥 Demographic information
-
-### Purpose
-
-Provide decision-makers with a quick overview before moving into detailed analytical pages.
-
----
-
-# 02 — 🚗 Traffic Analytics
-
-The Traffic Analytics section focuses on transportation and road-performance variables.
-
-### Main analytical variables
-
-| Variable              | Purpose                           |
-| --------------------- | --------------------------------- |
-| 🏎️ Average Speed     | Understand observed speed         |
-| 🚦 Traffic Density    | Understand traffic concentration  |
-| 📏 Distance           | Analyze distance-related patterns |
-| ⏱️ Travel Time        | Examine journey duration          |
-| 🛣️ Road Type         | Compare different road categories |
-| 🌦️ Weather Condition | Examine environmental conditions  |
-
-### Analytical flow
+The main analytical component of the project is the Power BI report:
 
 ```text
-Road Type
-    │
-    ├──────────────┐
-    ▼              ▼
-Traffic Density   Average Speed
-    │              │
-    └──────┬───────┘
-           ▼
-       Travel Time
-           │
-           ▼
-    Mobility Analysis
+Smart-City Mobility-Intelligence-Platform-Final.pbix
 ```
+
+The report contains dedicated analytical pages for different mobility domains and cities.
+
+## 📄 Report at a Glance
+
+The verified Power BI report contains **16 report pages**:
+
+|  # | Report Page                         |
+| -: | ----------------------------------- |
+| 01 | Data Acquisition and Integration    |
+| 02 | Executive Dashboard                 |
+| 03 | Bengaluru Executive Dashboard       |
+| 04 | Transit Analytics Dashboard         |
+| 05 | Bengaluru Transit Analytics         |
+| 06 | Traffic Analytics                   |
+| 07 | Bengaluru Traffic Analytics         |
+| 08 | Metro Analytics Dashboard           |
+| 09 | Bengaluru Metro Analytics Dashboard |
+| 10 | Smart Mobility Dashboard            |
+| 11 | Bengaluru Smart Mobility            |
+| 12 | Executive Intelligence              |
+| 13 | Bengaluru Executive Intelligence    |
+| 14 | Ride Hailing Dashboard              |
+| 15 | Ride Hailing Delhi                  |
+| 16 | Delhi vs Bengaluru                  |
+
+This structure provides both **domain-specific analysis** and **city-specific views**.
 
 ---
 
-# 03 — 🚌 Public Transport Analytics
+# 🗂️ Report Pages
 
-The Public Transport Analytics section focuses on public transportation network information.
+## 1️⃣ Data Acquisition and Integration
+
+The report begins with a dedicated data acquisition and integration view.
+
+This section provides an overview of the datasets incorporated into the analytical platform and their role in the overall mobility analysis.
+
+It establishes the foundation for combining information from different mobility domains.
+
+---
+
+## 2️⃣ Executive Dashboard
+
+The Executive Dashboard provides a high-level overview of the mobility environment.
+
+It brings important indicators together into an executive-friendly analytical view.
 
 ### Includes
 
-* 🚌 Bus routes
-* 📍 Bus stops
-* 🔄 Trips
-* 🗺️ Route distribution
-* 📊 Network indicators
+* Mobility KPIs
+* Transportation indicators
+* Weather-related information
+* Demographic context
+* Summary visualizations
+* Interactive filtering
 
-### Key questions
-
-* How are bus routes distributed?
-* Where are transportation stops located?
-* How is the network structured?
-* What transportation indicators can be derived from the available data?
+The purpose of this page is to provide a quick understanding of the overall mobility situation before moving into domain-specific analysis.
 
 ---
 
-# 04 — 🗺️ Smart Mobility Dashboard
+## 3️⃣ Bengaluru Executive Dashboard
 
-The Smart Mobility Dashboard brings different transportation modes together.
+A dedicated executive dashboard is provided for **Bengaluru**.
 
-### Includes
-
-* 📍 Bus stop mapping
-* 🚇 Metro station mapping
-* 🚌 Bus information
-* 🚇 Metro information
-* 📊 Transportation KPIs
-* 🗺️ Geographic visualization
-
-### Multimodal perspective
-
-```text
-             🏙️ SMART MOBILITY
-                     │
-       ┌─────────────┼─────────────┐
-       ▼             ▼             ▼
-      🚌 BUS       🚇 METRO      🚲 BIKE
-       │             │             │
-       └─────────────┼─────────────┘
-                     ▼
-                📊 ANALYTICS
-```
+It provides a city-specific view of mobility indicators and allows users to understand Bengaluru's transportation environment independently.
 
 ---
 
-# 05 — 🧠 Executive Intelligence Dashboard
+# 🚌 Public Transport Analytics
 
-The Executive Intelligence dashboard consolidates important mobility indicators into a decision-oriented view.
+## 4️⃣ Transit Analytics Dashboard
 
-### Includes
+The Transit Analytics Dashboard focuses on public bus transportation.
 
-* 🧠 Mobility Health Score
-* 🚗 Traffic performance
-* 🚌 Transit indicators
-* 🌦️ Weather analytics
-* 📊 Executive KPIs
+### Analysis Areas
 
----
-
-# 🧠 Mobility Health Score
-
-The platform includes a **Mobility Health Score** as a project-level analytical indicator.
-
-It provides a consolidated way of looking at mobility conditions within the dashboard.
-
-```text
-                    🧠 MOBILITY
-                  HEALTH SCORE
-                        │
-          ┌─────────────┼─────────────┐
-          ▼             ▼             ▼
-       🚗 Traffic     🚌 Transit    🌦️ Weather
-          │             │             │
-          └─────────────┼─────────────┘
-                        ▼
-                 📊 Overall View
-```
-
-> **Important:** The Mobility Health Score is a project-specific analytical measure. It is not presented as an official government mobility index.
-
----
-
-# 🖼️ Architecture Diagram
-
-<p align="center">
-
-<img src="Urban_Pulse_Architecture_Diagram.png" width="950">
-
-</p>
-
-<p align="center">
-<i>Urban Mobility Intelligence Architecture</i>
-</p>
-
----
-
-# 🏗️ System Architecture
-
-```mermaid
-flowchart TD
-
-    A[🌐 Urban Mobility Data]
-
-    A --> B[🚗 Traffic]
-    A --> C[🚌 Bus / GTFS]
-    A --> D[🚇 Metro]
-    A --> E[🚲 Bike Sharing]
-    A --> F[🌦️ Weather]
-    A --> G[👥 Demographics]
-
-    B --> H[🧹 Data Preparation]
-    C --> H
-    D --> H
-    E --> H
-    F --> H
-    G --> H
-
-    H --> I[🐍 Python Preprocessing]
-    I --> J[🔄 Power Query]
-
-    J --> K[🗄️ Power BI Data Model]
-
-    K --> L[🧮 DAX Measures & KPIs]
-
-    L --> M[📊 Power BI Dashboard]
-
-    M --> N[🎯 Executive Dashboard]
-    M --> O[🚗 Traffic Analytics]
-    M --> P[🚌 Public Transport]
-    M --> Q[🗺️ Smart Mobility]
-    M --> R[🧠 Executive Intelligence]
-```
-
----
-
-# 🔄 End-to-End Data Pipeline
-
-```text
-┌─────────────────────────────┐
-│       📥 DATA SOURCES       │
-├─────────────────────────────┤
-│ Traffic                     │
-│ Bus / GTFS                  │
-│ Metro                       │
-│ Bike Sharing                │
-│ Weather                     │
-│ Demographics                │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│     🧹 DATA PREPARATION     │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│   🐍 PYTHON PREPROCESSING   │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│       🔄 POWER QUERY        │
-│      ETL & TRANSFORMATIONS  │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│      🗄️ DATA MODEL         │
-│        POWER BI             │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│       🧮 DAX LAYER         │
-│       KPIs & Measures       │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│       📊 POWER BI           │
-│      VISUAL ANALYTICS       │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│      🧠 MOBILITY INSIGHTS   │
-└─────────────────────────────┘
-```
-
----
-
-# 📂 Data Ecosystem
-
-The repository contains dedicated data directories for **Delhi** and **Bengaluru**.
-
----
-
-## 🇮🇳 Delhi Dataset Collection
-
-<details>
-<summary><b>📂 Click to expand Delhi datasets</b></summary>
-
-<br>
-
-### 🚌 Public Transportation
-
-| File             | Description           |
-| ---------------- | --------------------- |
-| `Delhi GTFS.zip` | Delhi bus GTFS data   |
-| `DMRC_GTFS.zip`  | Delhi Metro GTFS data |
-
-### 🚲 Micromobility
-
-| File               | Description          |
-| ------------------ | -------------------- |
-| `Bike-Sharing.zip` | Bike-sharing dataset |
-
-### 🚗 Traffic
-
-| File                         | Description                    |
-| ---------------------------- | ------------------------------ |
-| `Delhi Traffic Dataset.zip`  | Delhi traffic dataset          |
-| `delhi_traffic_features.csv` | Processed traffic feature data |
-| `delhi_traffic_target.csv`   | Traffic target data            |
-
-### 🌦️ Weather
-
-| File                     | Description                    |
-| ------------------------ | ------------------------------ |
-| `Delhi_Weather_2025.csv` | Delhi weather dataset for 2025 |
-
-### 👥 Demographics
-
-| File                      | Description            |
-| ------------------------- | ---------------------- |
-| `Delhi_Demographics.xlsx` | Delhi demographic data |
-
-</details>
-
----
-
-# 🇮🇳 Bengaluru Dataset Collection
-
-<details>
-<summary><b>📂 Click to expand Bengaluru datasets</b></summary>
-
-<br>
-
-### 🚗 Traffic
-
-| File                           | Description               |
-| ------------------------------ | ------------------------- |
-| `Banglore_traffic_Dataset.csv` | Bengaluru traffic dataset |
-
-### 🚌 Bus
-
-| File                           | Description         |
-| ------------------------------ | ------------------- |
-| `Bengaluru_Bus_aggregated.csv` | Aggregated bus data |
-| `Bengaluru_Bus_routes.csv`     | Bus route data      |
-| `Bengaluru_Bus_stops.csv`      | Bus stop data       |
-
-### 🚇 Metro
-
-| File                                       | Description               |
-| ------------------------------------------ | ------------------------- |
-| `Bengaluru-Metro-Network-Dataset-main.zip` | Metro network dataset     |
-| `NammaMetro_Ridership_Dataset.csv`         | Metro ridership dataset   |
-| `bengaluru_metro_network.csv`              | Metro network information |
-| `bengaluru_metro_stations.csv`             | Metro station information |
-
-### 🚲 Micromobility
-
-| File               | Description          |
-| ------------------ | -------------------- |
-| `Bike-Sharing.zip` | Bike-sharing dataset |
-
-### 🌦️ Weather
-
-| File                         | Description                        |
-| ---------------------------- | ---------------------------------- |
-| `Bengaluru_Weather_2025.csv` | Bengaluru weather dataset for 2025 |
-
-### 👥 Demographics
-
-| File                         | Description                |
-| ---------------------------- | -------------------------- |
-| `Bengaluru_Demographics.csv` | Bengaluru demographic data |
-
-</details>
-
----
-
-# 🚌 GTFS Transit Data
-
-The project uses **General Transit Feed Specification (GTFS)** data for public transportation analysis.
-
-GTFS provides a standardized structure for representing transit networks.
-
-### Core GTFS files
-
-```text
-routes.txt
-trips.txt
-stops.txt
-stop_times.txt
-agency.txt
-calendar.txt
-shapes.txt
-```
-
-### GTFS relationship
-
-```text
-                 🚌 TRANSIT SYSTEM
-                        │
-          ┌─────────────┼─────────────┐
-          ▼             ▼             ▼
-       ROUTES          STOPS         TRIPS
-          │             │             │
-          └─────────────┼─────────────┘
-                        ▼
-                  STOP TIMES
-                        │
-                        ▼
-                TRANSIT NETWORK
-```
-
-### GTFS enables analysis of
-
-* 🚌 Routes
-* 📍 Stops
-* 🔄 Trips
-* ⏱️ Stop times
-* 🏢 Agencies
-* 📅 Service calendars
-* 🗺️ Route shapes
-
----
-
-# 🚗 Traffic Analytics
-
-Traffic datasets contain variables that allow mobility conditions to be explored.
-
-### Main variables
-
-```text
-Average Speed
-      │
-Traffic Density
-      │
-Distance
-      │
-Travel Time
-      │
-Road Type
-      │
-Weather Condition
-```
-
-### Analytical perspective
-
-```text
-              🚗 TRAFFIC
-                   │
-       ┌───────────┼───────────┐
-       ▼           ▼           ▼
-    Speed       Density     Travel Time
-       │           │           │
-       └───────────┼───────────┘
-                   ▼
-             Road Analysis
-                   │
-                   ▼
-            Mobility Insights
-```
-
----
-
-# 🚌 Public Transportation Analytics
-
-The platform analyzes bus transportation through structured datasets and GTFS information.
-
-### Areas of analysis
-
+* Bus routes
+* Bus stops
+* Trips
+* Service patterns
 * Route distribution
-* Stop distribution
-* Trip information
+* Stop activity
+* Transportation network characteristics
+
+The dashboard helps users understand the structure and usage-related characteristics of the bus network.
+
+---
+
+## 5️⃣ Bengaluru Transit Analytics
+
+The Bengaluru-specific transit dashboard provides similar analytical capabilities for Bengaluru.
+
+It focuses on:
+
+* Bengaluru bus routes
+* Bus stops
+* Bus trips
+* Service information
+* Route-level analysis
 * Network characteristics
-* Geographic transportation coverage
 
-### Transit structure
-
-```text
-🚌 BUS NETWORK
-      │
-      ├── Routes
-      │
-      ├── Stops
-      │
-      ├── Trips
-      │
-      └── Stop Times
-```
+This creates a dedicated analytical environment for studying Bengaluru's public bus transportation system.
 
 ---
 
 # 🚇 Metro Analytics
 
-Metro datasets provide information for analyzing urban rail infrastructure.
+## 6️⃣ Metro Analytics Dashboard
 
-### Delhi
+The Metro Analytics Dashboard focuses on metro transportation.
 
-* DMRC GTFS data
-* Metro network information
+### Key analytical areas
 
-### Bengaluru
-
-* Metro network
 * Metro stations
-* Namma Metro ridership
-* Network information
+* Metro lines
+* Metro routes
+* Ridership
+* Pass usage
+* Smart card usage
+* Token usage
+* Network distribution
 
-### Metro analysis
+The dashboard provides a detailed view of metro transportation activity.
+
+---
+
+## 7️⃣ Bengaluru Metro Analytics Dashboard
+
+A dedicated Bengaluru metro dashboard provides city-specific metro analysis.
+
+It can be used to explore:
+
+* Bengaluru metro stations
+* Metro network structure
+* Ridership information
+* Metro lines
+* Passenger usage patterns
+* Transportation network characteristics
+
+---
+
+# 🚦 Traffic Analytics
+
+## 8️⃣ Traffic Analytics
+
+The Traffic Analytics Dashboard examines urban road traffic patterns.
+
+### Key Analysis Areas
+
+* Traffic density
+* Traffic volume
+* Average speed
+* Travel time
+* Road characteristics
+* Road capacity
+* Congestion-related indicators
+* Time-of-day patterns
+* Distance and speed relationships
+
+Example analytical questions include:
+
+> How does average speed vary across different periods?
+
+> Which areas or road segments experience higher traffic levels?
+
+> How does traffic volume relate to road capacity?
+
+> How does travel time vary throughout the day?
+
+---
+
+## 9️⃣ Bengaluru Traffic Analytics
+
+The Bengaluru Traffic Analytics page provides a dedicated view for Bengaluru.
+
+It focuses on city-specific traffic characteristics including:
+
+* Traffic volume
+* Traffic density
+* Average speed
+* Travel time
+* Road conditions
+* Congestion indicators
+* Temporal traffic patterns
+
+---
+
+# 🚕 Ride-Hailing Analytics
+
+Ride-hailing is an additional mobility dimension incorporated into the platform.
+
+## 🔟 Ride Hailing Dashboard
+
+The Ride Hailing Dashboard provides analytical views around ride-hailing activity.
+
+### Analysis Areas
+
+* Booking activity
+* Operators
+* Vehicle types
+* Trip distance
+* Fare
+* Revenue-related indicators
+* Booking patterns
+* Trip characteristics
+
+The dashboard helps explore how ride-hailing contributes to the broader urban mobility ecosystem.
+
+---
+
+## 1️⃣1️⃣ Ride Hailing Delhi
+
+A dedicated Delhi ride-hailing page provides a city-specific analytical view.
+
+Potential analytical relationships explored within the dashboard include:
 
 ```text
-             🚇 METRO
-                │
-       ┌────────┼────────┐
-       ▼        ▼        ▼
-    Stations  Network  Ridership
-       │        │        │
-       └────────┼────────┘
-                ▼
-         Metro Intelligence
+Bookings
+   │
+   ├── Operator
+   │
+   ├── Vehicle Type
+   │
+   ├── Trip Distance
+   │
+   ├── Fare
+   │
+   └── Time / Conditions
 ```
+
+This allows users to explore ride characteristics and demand patterns through interactive Power BI visuals.
 
 ---
 
 # 🚲 Bike-Sharing Analytics
 
-Bike-sharing datasets provide an additional view of urban mobility beyond conventional public transportation.
+Bike-sharing datasets are included within the project data repository.
 
-### Role in the platform
+They provide another dimension for understanding urban transportation and shared mobility.
 
-```text
-🚲 BIKE SHARING
-      │
-      ├── Micromobility
-      │
-      ├── Station Information
-      │
-      └── Trip / Availability Data
-```
-
-Bike-sharing analysis contributes to the broader multimodal mobility perspective.
+The bike-sharing information can be used alongside other mobility datasets to provide broader context around urban transportation activity.
 
 ---
 
 # 🌦️ Weather Analytics
 
-Weather data provides environmental context for mobility analysis.
+Weather is incorporated as an additional contextual dimension.
 
-### Variables
+The project includes weather datasets containing information such as:
 
-| Variable        | Analytical Role        |
-| --------------- | ---------------------- |
-| 🌡️ Temperature | Temperature conditions |
-| 💧 Humidity     | Atmospheric conditions |
-| 🌧️ Rainfall    | Precipitation          |
-| 💨 Wind Speed   | Wind conditions        |
+* Temperature
+* Humidity
+* Weather conditions
+* Date/time-related observations
 
-### Weather → Mobility
+Weather information can be analyzed alongside mobility datasets to explore relationships such as:
 
 ```text
-              🌦️ WEATHER
-                   │
-       ┌───────────┼───────────┐
-       ▼           ▼           ▼
- Temperature   Humidity    Rainfall
-       │           │           │
-       └───────────┼───────────┘
-                   ▼
-             Mobility Context
+Weather Conditions
+        │
+        ├──────────────► Traffic
+        │
+        ├──────────────► Public Transport
+        │
+        └──────────────► Ridership / Mobility Activity
 ```
+
+The dashboard therefore provides a way to examine mobility patterns under different environmental conditions.
+
+> **Important:** The platform performs analytical comparison and exploration. It should not be interpreted as proving that weather alone causes a specific mobility outcome.
 
 ---
 
 # 👥 Demographic Analytics
 
-Demographic datasets provide city-level population and urban indicators that can be considered alongside transportation information.
+Demographic datasets provide contextual information about the cities.
 
-### Used for
+Examples include:
 
-* Population context
-* Urban indicators
-* City-level analysis
-* Mobility planning context
+* Population information
+* Population distribution
+* Urban/rural characteristics
+* Population density-related indicators
 
----
+Demographic information helps provide additional context when interpreting transportation patterns.
 
-# 🗺️ Geographic Analytics
-
-Geographic visualization is an important part of the Power BI dashboard.
-
-### Visualized infrastructure includes
-
-* 📍 Bus stops
-* 🚇 Metro stations
-* 🗺️ Transportation networks
-
-### Spatial perspective
+For example:
 
 ```text
-             🗺️ CITY MAP
+Demographic Context
+        │
+        ├── Population
+        │
+        ├── Population Density
+        │
+        └── Urban Characteristics
                   │
-        ┌─────────┼─────────┐
-        ▼         ▼         ▼
-      🚌 Bus    🚇 Metro   🚲 Bike
-       Stops    Stations   Network
-        │         │         │
-        └─────────┼─────────┘
                   ▼
-          Geographic Mobility
+          Mobility Analysis
 ```
 
 ---
 
-# 📊 KPI Framework
+# ⚖️ Delhi vs Bengaluru
 
-The dashboard uses KPIs to summarize important mobility indicators.
+## 16️⃣ Delhi vs Bengaluru
 
-## 🚗 Traffic KPIs
+The final comparison page brings the two cities together.
 
-| KPI             | Description                                   |
-| --------------- | --------------------------------------------- |
-| Average Speed   | Average speed represented in the traffic data |
-| Traffic Density | Traffic concentration indicator               |
-| Travel Time     | Travel-duration indicator                     |
-| Distance        | Distance-related traffic measure              |
+Instead of analyzing Delhi and Bengaluru independently, this page provides a consolidated comparative perspective.
 
-## 🚌 Transit KPIs
+### Comparison Dimensions
 
-| KPI          | Description                  |
-| ------------ | ---------------------------- |
-| Total Routes | Number of routes represented |
-| Total Stops  | Number of transit stops      |
-| Total Trips  | Number of trips represented  |
+* Traffic
+* Public transportation
+* Metro
+* Mobility infrastructure
+* Ride-hailing
+* Weather context
+* Demographics
+* Mobility-related KPIs
 
-## 🚇 Metro KPIs
-
-| KPI            | Description                           |
-| -------------- | ------------------------------------- |
-| Metro Stations | Number of stations represented        |
-| Metro Network  | Metro infrastructure information      |
-| Ridership      | Available metro ridership information |
-
-## 🌦️ Weather KPIs
-
-| KPI         | Description           |
-| ----------- | --------------------- |
-| Temperature | Temperature indicator |
-| Humidity    | Humidity indicator    |
-| Rainfall    | Rainfall indicator    |
-| Wind Speed  | Wind-speed indicator  |
-
-## 🧠 Executive KPI
-
-| KPI                   | Description                                |
-| --------------------- | ------------------------------------------ |
-| Mobility Health Score | Project-level composite mobility indicator |
+The comparison page allows users to identify differences and similarities between the two urban mobility environments.
 
 ---
 
-# 🧮 DAX & Analytical Layer
+# 📈 Key KPIs
 
-**DAX (Data Analysis Expressions)** is used within Power BI for calculated metrics and KPI development.
+The platform uses KPI cards and analytical measures to summarize mobility performance.
 
-The analytical layer supports:
+Depending on the dashboard/page, the report includes indicators related to:
+
+### 🚦 Traffic
+
+* Average Speed
+* Traffic Volume
+* Traffic Density
+* Travel Time
+* Road Capacity / Utilization
+
+### 🚌 Bus
+
+* Total Routes
+* Total Stops
+* Total Trips
+* Route Distribution
+* Stop Activity
+
+### 🚇 Metro
+
+* Metro Stations
+* Metro Lines
+* Ridership
+* Pass Usage
+* Smart Card Usage
+* Token Usage
+
+### 🚕 Ride-Hailing
+
+* Bookings
+* Trip Distance
+* Fare
+* Revenue-related indicators
+* Vehicle Type
+* Operator Activity
+
+### 🌦️ Weather
+
+* Average Temperature
+* Average Humidity
+* Weather Conditions
+
+### 👥 Demographics
+
+* Population
+* Population Density
+* Urban/Rural Distribution
+
+---
+
+# 🧮 Analytics & Calculations
+
+The analytical layer of the project is implemented using **Power BI calculations and data transformation capabilities**.
+
+## DAX
+
+**DAX (Data Analysis Expressions)** is used within Power BI for analytical calculations and measures.
+
+DAX supports:
 
 * KPI calculations
 * Aggregations
+* Ratios
+* Conditional calculations
 * Analytical measures
-* Dashboard indicators
-* Executive metrics
-
-### Conceptual flow
-
-```text
-Raw Data
-   │
-   ▼
-Power Query
-   │
-   ▼
-Data Model
-   │
-   ▼
-DAX Measures
-   │
-   ▼
-KPIs
-   │
-   ▼
-Power BI Visuals
-```
+* Dashboard-level metrics
 
 ---
 
-# 🔄 Power Query & Data Transformation
+## Power Query
 
-Power Query is used as the transformation layer within the Power BI workflow.
+**Power Query** is used as part of the data preparation and integration workflow.
 
-Typical transformation activities include:
+It supports tasks such as:
 
+* Data import
+* Data transformation
 * Data cleaning
-* Data type conversion
-* Filtering
-* Combining datasets
-* Column transformation
-* Preparing data for analysis
-
-### ETL perspective
-
-```text
-📥 Extract
-   │
-   ▼
-🧹 Clean
-   │
-   ▼
-🔄 Transform
-   │
-   ▼
-🗄️ Load into Model
-   │
-   ▼
-📊 Analyze
-```
-
----
-
-# 🐍 Python Preprocessing
-
-Python is part of the documented data-processing workflow for preprocessing.
-
-Its role is positioned at the **data preparation stage**, before the final Power BI analytical layer.
-
-```text
-Raw Dataset
-     │
-     ▼
-🐍 Python
-     │
-     ▼
-Processed Dataset
-     │
-     ▼
-🔄 Power Query
-     │
-     ▼
-📊 Power BI
-```
-
-> Python is used as a preprocessing component; the primary visualization and Business Intelligence environment is Power BI.
+* Column transformations
+* Data type handling
+* Dataset preparation
+* Integration of multiple data sources
 
 ---
 
 # 🛠️ Technology Stack
 
-<div align="center">
+| Technology                    | Purpose                                 |
+| ----------------------------- | --------------------------------------- |
+| 🟨 Microsoft Power BI Desktop | Dashboard development and visualization |
+| 🟪 DAX                        | Measures and analytical calculations    |
+| 🟩 Power Query                | Data transformation and preparation     |
+| 📄 CSV / Excel                | Dataset storage and source data         |
+| 🗜️ ZIP / GTFS datasets       | Transport data packages                 |
+| 🗺️ Map Visualizations        | Geographic mobility analysis            |
 
-|        Technology       | Role                         |
-| :---------------------: | ---------------------------- |
-| 🟨 **Power BI Desktop** | Dashboarding & visualization |
-|        🧮 **DAX**       | Measures & KPI calculations  |
-|    🔄 **Power Query**   | Data transformation & ETL    |
-|      🐍 **Python**      | Data preprocessing           |
-|       🚌 **GTFS**       | Public transportation data   |
-|  🌦️ **Open-Meteo API** | Weather data source          |
-|  📊 **Microsoft Excel** | Structured demographic data  |
-|        📄 **CSV**       | Dataset storage              |
-
-</div>
+### No Python dependency is claimed in this project README.
 
 ---
 
-# 🧠 Analytical Framework
+# 🏗️ System Architecture
 
-The project can be understood through three major analytical layers.
+The overall architecture can be represented as:
 
-## 1️⃣ Descriptive Analytics
-
-### Question
-
-> **What is happening?**
-
-Examples:
-
-* Average speed
-* Traffic density
-* Number of routes
-* Number of stops
-* Number of trips
-* Weather conditions
+```text
+                    ┌─────────────────────────┐
+                    │     SOURCE DATASETS     │
+                    └────────────┬────────────┘
+                                 │
+              ┌──────────────────┼──────────────────┐
+              │                  │                  │
+              ▼                  ▼                  ▼
+        Traffic Data       Transit Data       Metro Data
+              │                  │                  │
+              ├──────────────────┼──────────────────┤
+              │                  │                  │
+              ▼                  ▼                  ▼
+        Weather Data       Demographics       Ride-Hailing
+              │                  │                  │
+              └──────────────────┼──────────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │      POWER QUERY        │
+                    │ Data Preparation &      │
+                    │ Transformation          │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │       POWER BI          │
+                    │       DATA MODEL        │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │          DAX            │
+                    │ Measures & Calculations │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                 ┌──────────────────────────────────┐
+                 │      INTERACTIVE DASHBOARDS      │
+                 └────────────────┬─────────────────┘
+                                  │
+             ┌────────────────────┼────────────────────┐
+             │                    │                    │
+             ▼                    ▼                    ▼
+         DELHI                BENGALURU          COMPARISON
+             │                    │                    │
+             └────────────────────┼────────────────────┘
+                                  │
+                                  ▼
+                         EXECUTIVE INSIGHTS
+```
 
 ---
 
-## 2️⃣ Diagnostic Analytics
+# 🔄 Data Flow
 
-### Question
+The project follows a structured BI workflow:
 
-> **What factors are associated with mobility conditions?**
-
-Examples:
-
-* Traffic vs. weather
-* Speed vs. traffic density
-* Road type vs. traffic
-* Transportation infrastructure vs. geographic distribution
+```text
+1. Data Collection
+       ↓
+2. Data Import
+       ↓
+3. Data Preparation
+       ↓
+4. Data Transformation
+       ↓
+5. Data Modeling
+       ↓
+6. DAX Measures
+       ↓
+7. Interactive Visualizations
+       ↓
+8. Dashboard Analysis
+       ↓
+9. Executive / Comparative Insights
+```
 
 ---
 
-## 3️⃣ Executive Analytics
+# 📥 Data Acquisition & Integration
 
-### Question
+The repository contains datasets for both Delhi and Bengaluru.
 
-> **What does the overall mobility picture look like?**
-
-The Executive Intelligence layer consolidates key indicators into a high-level view.
+The datasets cover multiple dimensions of mobility rather than relying on a single transportation source.
 
 ---
 
-# 🔍 Key Questions Explored
+# 🇮🇳 Bengaluru Data
 
-<details>
-<summary>🚗 Traffic Questions</summary>
+The repository contains a dedicated:
 
-<br>
+```text
+Bengaluru Data/
+```
 
-* How does traffic density vary?
-* What is the average speed?
+directory.
+
+### Available datasets
+
+| Dataset                                    | Purpose                       |
+| ------------------------------------------ | ----------------------------- |
+| `Banglore_traffic_Dataset.csv`             | Bengaluru traffic analysis    |
+| `Bengaluru_Bus_aggregated.csv`             | Aggregated bus information    |
+| `Bengaluru_Bus_routes.csv`                 | Bus route information         |
+| `Bengaluru_Bus_stops.csv`                  | Bus stop information          |
+| `Bengaluru_Demographics.csv`               | Demographic analysis          |
+| `Bengaluru_Weather_2025.csv`               | Weather analysis              |
+| `NammaMetro_Ridership_Dataset.csv`         | Metro ridership analysis      |
+| `bengaluru_metro_network.csv`              | Metro network information     |
+| `bengaluru_metro_stations.csv`             | Metro station information     |
+| `Bike-Sharing.zip`                         | Bike-sharing data             |
+| `Bengaluru-Metro-Network-Dataset-main.zip` | Metro network dataset package |
+
+---
+
+# 🇮🇳 Delhi Data
+
+The repository contains:
+
+```text
+Delhi Data/
+```
+
+### Available datasets
+
+| Dataset                      | Purpose                             |
+| ---------------------------- | ----------------------------------- |
+| `Delhi_Demographics.xlsx`    | Demographic analysis                |
+| `Delhi_Weather_2025.csv`     | Weather analysis                    |
+| `delhi_traffic_features.csv` | Traffic features                    |
+| `delhi_traffic_target.csv`   | Traffic target data                 |
+| `DMRC_GTFS.zip`              | Delhi Metro GTFS dataset            |
+| `Delhi GTFS.zip`             | Delhi public transport GTFS dataset |
+| `Delhi Traffic Dataset.zip`  | Delhi traffic dataset               |
+| `Bike-Sharing.zip`           | Bike-sharing dataset                |
+
+---
+
+# 🚌 GTFS Data
+
+The project repository contains GTFS-based transportation datasets.
+
+**GTFS (General Transit Feed Specification)** is a standardized format for representing public transportation information.
+
+GTFS datasets can represent information such as:
+
+* Routes
+* Stops
+* Trips
+* Service calendars
+* Stop times
+* Transit network structure
+
+This makes GTFS useful for organizing and analyzing public transportation systems.
+
+---
+
+# 🗺️ Geospatial Mobility Analysis
+
+The Power BI dashboards include geographic visualizations for transportation infrastructure.
+
+These include analytical mapping of:
+
+* Bus stops
+* Metro stations
+* Transportation locations
+* Mobility infrastructure
+
+This provides spatial context to otherwise tabular transportation data.
+
+---
+
+# ✨ Key Features
+
+## 🔹 Multi-City Analysis
+
+Dedicated analytical views for:
+
+* Delhi
+* Bengaluru
+
+---
+
+## 🔹 Multi-Modal Mobility
+
+The platform combines:
+
+```text
+🚦 Traffic
+🚌 Bus
+🚇 Metro
+🚕 Ride-Hailing
+🚲 Bike Sharing
+🌦️ Weather
+👥 Demographics
+```
+
+---
+
+## 🔹 Interactive Power BI Dashboards
+
+Users can interact with:
+
+* Filters
+* Slicers
+* Charts
+* KPI cards
+* Maps
+* Comparative visuals
+* Analytical pages
+
+---
+
+## 🔹 Executive-Level Reporting
+
+High-level dashboards provide summarized mobility indicators suitable for quick analysis.
+
+---
+
+## 🔹 Domain-Specific Analysis
+
+Separate pages are dedicated to:
+
+* Traffic
+* Transit
+* Metro
+* Ride-Hailing
+* Smart Mobility
+* Executive Intelligence
+
+---
+
+## 🔹 City-Specific Analytics
+
+Delhi and Bengaluru have dedicated dashboards for major mobility domains.
+
+---
+
+## 🔹 Comparative Analysis
+
+A dedicated Delhi vs Bengaluru page allows cross-city comparison.
+
+---
+
+# 💡 Questions the Platform Answers
+
+The platform can be used to explore questions such as:
+
+### 🚦 Traffic
+
+* Where are traffic levels higher?
+* How does average speed vary?
+* How does traffic change throughout the day?
 * How does travel time vary?
-* How does traffic differ across road types?
-* What weather conditions are present alongside traffic records?
+* How does traffic relate to road capacity?
 
-</details>
+### 🚌 Public Transport
 
-<details>
-<summary>🚌 Bus Questions</summary>
+* How many routes and stops are present?
+* Which stops show higher activity?
+* How are routes distributed?
+* How does the bus network differ between cities?
 
-<br>
+### 🚇 Metro
 
-* How are bus routes distributed?
-* Where are bus stops located?
-* How many trips are represented?
-* What does the bus network look like geographically?
+* How are metro stations distributed?
+* What metro lines are represented?
+* How does ridership vary?
+* How are passes, tokens, and smart cards represented in usage data?
 
-</details>
+### 🚕 Ride-Hailing
 
-<details>
-<summary>🚇 Metro Questions</summary>
+* Which operators have higher booking activity?
+* Which vehicle types are more common?
+* How does trip distance relate to fare?
+* How does booking activity vary?
 
-<br>
+### 🌦️ Weather
 
-* Where are metro stations located?
-* How is the metro network distributed?
-* What ridership information is available?
-* How does metro infrastructure contribute to the mobility ecosystem?
+* How does mobility activity vary under different weather conditions?
+* How do temperature and humidity vary?
+* What patterns can be observed between weather and transportation indicators?
 
-</details>
+### ⚖️ City Comparison
 
-<details>
-<summary>🚲 Bike-Sharing Questions</summary>
-
-<br>
-
-* Where is bike-sharing information available?
-* How does micromobility fit into the broader transportation ecosystem?
-* What station/trip information is available?
-
-</details>
-
-<details>
-<summary>🌦️ Weather Questions</summary>
-
-<br>
-
-* What are the temperature patterns?
-* What are the humidity conditions?
-* How does rainfall vary?
-* What are the wind-speed conditions?
-* How can weather be considered alongside mobility information?
-
-</details>
-
-<details>
-<summary>🏙️ City Comparison Questions</summary>
-
-<br>
-
-The integrated Delhi and Bengaluru datasets allow transportation characteristics and mobility indicators to be explored across both cities.
-
-</details>
+* How do Delhi and Bengaluru differ in mobility characteristics?
+* How do transportation networks compare?
+* What differences are visible across traffic, transit, metro, and other mobility dimensions?
 
 ---
 
@@ -1105,28 +915,23 @@ The integrated Delhi and Bengaluru datasets allow transportation characteristics
 Smart-City-Mobility-Intelligence-Platform/
 │
 ├── 📂 Bengaluru Data/
-│   │
 │   ├── Banglore_traffic_Dataset.csv
+│   ├── Bengaluru-Metro-Network-Dataset-main.zip
 │   ├── Bengaluru_Bus_aggregated.csv
 │   ├── Bengaluru_Bus_routes.csv
 │   ├── Bengaluru_Bus_stops.csv
 │   ├── Bengaluru_Demographics.csv
 │   ├── Bengaluru_Weather_2025.csv
-│   │
-│   ├── Bengaluru-Metro-Network-Dataset-main.zip
+│   ├── Bike-Sharing.zip
 │   ├── NammaMetro_Ridership_Dataset.csv
 │   ├── bengaluru_metro_network.csv
-│   ├── bengaluru_metro_stations.csv
-│   │
-│   └── Bike-Sharing.zip
+│   └── bengaluru_metro_stations.csv
 │
 ├── 📂 Delhi Data/
-│   │
-│   ├── Delhi GTFS.zip
-│   ├── DMRC_GTFS.zip
 │   ├── Bike-Sharing.zip
+│   ├── DMRC_GTFS.zip
+│   ├── Delhi GTFS.zip
 │   ├── Delhi Traffic Dataset.zip
-│   │
 │   ├── Delhi_Demographics.xlsx
 │   ├── Delhi_Weather_2025.csv
 │   ├── delhi_traffic_features.csv
@@ -1134,76 +939,22 @@ Smart-City-Mobility-Intelligence-Platform/
 │
 ├── 📊 Smart-City Mobility-Intelligence-Platform-Final.pbix
 │
-├── 📄 Documentation.docx
-│
-├── 📑 Presentation.pptx
-│
 ├── 🖼️ Urban_Pulse_Architecture_Diagram.png
 │
-├── ⚙️ .gitattributes
+├── 📄 Documentation.docx
 │
-└── 📘 README.md
+├── 📊 Presentation.pptx
+│
+├── 📜 README.md
+│
+└── ⚙️ .gitattributes
 ```
-
-The current repository root contains these project resources, while the Delhi and Bengaluru directories contain the corresponding datasets.
-
----
-
-# 📚 Project Resources
-
-## 📊 Power BI Report
-
-**File:**
-
-```text
-Smart-City Mobility-Intelligence-Platform-Final.pbix
-```
-
-This is the main Power BI report containing the project's dashboard environment.
-
-> The file is stored using Git LFS because of its large size.
-
----
-
-## 📄 Documentation
-
-**File:**
-
-```text
-Documentation.docx
-```
-
-Project documentation is included in the repository.
-
----
-
-## 📑 Presentation
-
-**File:**
-
-```text
-Presentation.pptx
-```
-
-The presentation file is included as supporting project material.
-
----
-
-## 🖼️ Architecture Diagram
-
-**File:**
-
-```text
-Urban_Pulse_Architecture_Diagram.png
-```
-
-This image provides the project's architecture visualization.
 
 ---
 
 # 🚀 Getting Started
 
-## 1️⃣ Clone the Repository
+## Step 1 — Clone the Repository
 
 ```bash
 git clone https://github.com/littlestuart07/Smart-City-Mobility-Intelligence-Platform.git
@@ -1211,7 +962,9 @@ git clone https://github.com/littlestuart07/Smart-City-Mobility-Intelligence-Pla
 
 ---
 
-## 2️⃣ Navigate to the Project
+## Step 2 — Open the Project
+
+Navigate to the repository:
 
 ```bash
 cd Smart-City-Mobility-Intelligence-Platform
@@ -1219,18 +972,13 @@ cd Smart-City-Mobility-Intelligence-Platform
 
 ---
 
-## 3️⃣ Explore the Data
+## Step 3 — Install Power BI Desktop
 
-```text
-Delhi Data/
-Bengaluru Data/
-```
-
-Both city directories contain their respective mobility datasets.
+Install **Microsoft Power BI Desktop** on a compatible Windows system.
 
 ---
 
-## 4️⃣ Open the Power BI Report
+## Step 4 — Open the PBIX File
 
 Open:
 
@@ -1238,319 +986,469 @@ Open:
 Smart-City Mobility-Intelligence-Platform-Final.pbix
 ```
 
-using **Power BI Desktop**.
+using Power BI Desktop.
 
 ---
 
-# 📊 Project Workflow
+## Step 5 — Explore the Report
 
-```mermaid
-flowchart LR
+Navigate through the report pages to explore:
 
-A[📥 Collect Data]
---> B[🧹 Prepare Data]
+* Executive dashboards
+* Traffic analytics
+* Transit analytics
+* Metro analytics
+* Smart mobility
+* Ride-hailing analytics
+* Executive intelligence
+* Delhi vs Bengaluru comparison
 
-B --> C[🐍 Preprocess]
+---
 
-C --> D[🔄 Power Query]
+# 🎨 Dashboard Navigation
 
-D --> E[🗄️ Data Model]
+The report is structured so users can move from broad analysis to detailed domain-level investigation.
 
-E --> F[🧮 DAX]
-
-F --> G[📊 Power BI]
-
-G --> H[🧠 Insights]
+```text
+                 EXECUTIVE OVERVIEW
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │   Mobility Domains  │
+              └──────────┬──────────┘
+                         │
+       ┌─────────────────┼─────────────────┐
+       ▼                 ▼                 ▼
+    TRAFFIC            TRANSIT            METRO
+       │                 │                 │
+       └─────────────────┼─────────────────┘
+                         │
+              ┌──────────┴──────────┐
+              ▼                     ▼
+        RIDE-HAILING          SMART MOBILITY
+              │                     │
+              └──────────┬──────────┘
+                         ▼
+                 EXECUTIVE INTELLIGENCE
+                         │
+                         ▼
+                 DELHI vs BENGALURU
 ```
 
 ---
 
-# 💼 Potential Applications
+# 📊 Visualization Approach
 
-The platform can support analytical use cases such as:
+The project uses multiple Power BI visualization types to communicate mobility information.
 
-## 🏛️ Transportation Authorities
+### KPI Cards
 
-* Monitor mobility indicators
-* Analyze transportation infrastructure
-* Explore traffic conditions
-* Study public transport networks
+Used to summarize important numerical indicators.
 
-## 🏙️ Urban Planning
+### Bar & Column Charts
 
-* Explore transportation infrastructure
-* Study geographic distribution
-* Compare mobility characteristics
-* Support data-informed planning
+Used for:
 
-## 🚦 Traffic Management
+* Route comparisons
+* Operator comparisons
+* Vehicle categories
+* Traffic patterns
+* Mobility distributions
 
-* Analyze traffic density
-* Study speed and travel-time patterns
-* Examine road-type differences
-* Consider weather conditions
+### Line Charts
 
-## 📊 Business Intelligence
+Used to examine changes across time.
 
-* Executive reporting
-* KPI monitoring
-* Multimodal data analysis
-* Interactive dashboard development
+### Maps
+
+Used to represent:
+
+* Bus stops
+* Metro stations
+* Geographic mobility infrastructure
+
+### Gauges
+
+Used for selected performance-oriented indicators.
+
+### Slicers
+
+Used to allow interactive filtering and exploration.
+
+---
+
+# 🧠 Analytical Perspective
+
+The project is designed around the idea that urban mobility should not be analyzed through a single transportation mode.
+
+For example:
+
+```text
+                 URBAN MOBILITY
+                       │
+       ┌───────────────┼────────────────┐
+       │               │                │
+    TRAFFIC          TRANSIT          METRO
+       │               │                │
+       └───────────────┼────────────────┘
+                       │
+                 SHARED MOBILITY
+                       │
+              ┌────────┴────────┐
+              │                 │
+         RIDE-HAILING      BIKE SHARING
+              │                 │
+              └────────┬────────┘
+                       │
+               CONTEXTUAL DATA
+                       │
+              ┌────────┴────────┐
+              │                 │
+           WEATHER         DEMOGRAPHICS
+              │                 │
+              └────────┬────────┘
+                       ▼
+               MOBILITY INSIGHTS
+```
+
+This multi-dimensional approach provides broader context for understanding transportation patterns.
 
 ---
 
 # 🎓 Skills Demonstrated
 
+This project demonstrates practical experience in:
+
 ### 📊 Business Intelligence
 
-* Power BI
-* Dashboard Development
-* Data Visualization
-* KPI Development
-* Data Storytelling
+* Dashboard development
+* KPI design
+* Interactive reporting
+* Data storytelling
 
 ### 🧮 Data Analytics
 
-* DAX
-* Mobility Analytics
-* Traffic Analytics
-* Geographic Analysis
-* Multimodal Transportation Analysis
+* Aggregation
+* Comparative analysis
+* Trend analysis
+* Relationship analysis
+* Multi-dimensional analysis
 
-### 🔄 Data Transformation
+### 🟨 Power BI
 
-* Power Query
-* ETL
-* Data Cleaning
-* Data Transformation
-* Data Modeling
+* Report development
+* Visual design
+* Interactive filtering
+* Geographic visualization
+* Dashboard navigation
 
-### 🐍 Data Processing
+### 🧮 DAX
 
-* Python preprocessing
+* Analytical measures
+* KPI calculations
+* Aggregations
+* Calculated metrics
 
-### 🚍 Transportation Analytics
+### 🔄 Power Query
 
-* GTFS
-* Bus Networks
-* Metro Networks
-* Traffic Data
-* Bike Sharing
+* Data import
+* Data transformation
+* Data preparation
+* Data integration
 
----
+### 🗺️ Geospatial Analytics
 
-# 🌟 What Makes the Platform Multimodal?
+* Mapping transportation infrastructure
+* Spatial exploration of mobility assets
 
-A city's mobility cannot be represented by traffic alone.
+### 🚦 Urban Mobility Analytics
 
-This project combines multiple transportation modes:
-
-```text
-                         🏙️ CITY
-                           │
-         ┌─────────────────┼─────────────────┐
-         ▼                 ▼                 ▼
-      🚗 ROAD            🚌 BUS            🚇 METRO
-         │                 │                 │
-         └─────────────────┼─────────────────┘
-                           │
-             ┌─────────────┴─────────────┐
-             ▼                           ▼
-        🚲 BIKE SHARE                 🌦️ WEATHER
-             │                           │
-             └─────────────┬─────────────┘
-                           ▼
-                     📊 POWER BI
-                           │
-                           ▼
-                  🧠 MOBILITY VIEW
-```
-
-This multimodal perspective is the central idea behind the platform.
+* Traffic analysis
+* Public transit analysis
+* Metro analysis
+* Ride-hailing analysis
+* Shared mobility analysis
 
 ---
 
-# 🔮 Future Scope
+# 🌍 Potential Applications
 
-The current platform establishes a foundation for additional mobility analytics.
+The analytical framework demonstrated by this project can be useful for:
 
-Possible future extensions include:
+### 🏙️ Smart City Planning
 
-### ⚡ Real-Time Data
+Understanding transportation patterns across urban areas.
 
-* Live traffic feeds
-* Real-time public transport feeds
-* Automated data refresh
-* Real-time mobility monitoring
+### 🚦 Traffic Management
 
-### 🤖 Predictive Analytics
+Analyzing traffic conditions, speeds, travel times, and congestion-related indicators.
 
-* Traffic forecasting
-* Travel-time prediction
-* Passenger demand forecasting
-* Congestion prediction
-* Anomaly detection
+### 🚌 Public Transport Planning
 
-### 🏙️ Additional Cities
+Understanding bus routes, stops, trips, and network structures.
 
-The analytical framework can potentially be extended to other Indian cities such as:
+### 🚇 Metro Planning
 
-**Mumbai • Chennai • Hyderabad • Pune • Kolkata • Ahmedabad**
+Analyzing metro infrastructure and ridership-related information.
 
-### 📱 Mobility Applications
+### 🚕 Shared Mobility Analysis
 
-A future application could potentially provide:
+Understanding ride-hailing and bike-sharing activity.
 
-* Mobility alerts
-* Route information
-* Transportation recommendations
-* Congestion awareness
-* Weather-aware travel information
+### 📊 Transportation Reporting
 
-> These are future extensions and are **not claimed as current implementations**.
+Providing decision-makers with consolidated mobility KPIs and visual analytics.
+
+### 🎓 Academic & Research Projects
+
+Demonstrating how heterogeneous urban datasets can be integrated into an interactive BI environment.
 
 ---
 
 # ⚠️ Limitations
 
-* Dataset coverage depends on the available source datasets.
-* Historical data may not represent current real-time conditions.
-* Different datasets may have different collection methodologies.
-* The Mobility Health Score is a project-specific analytical indicator.
-* Power BI Desktop is required to fully explore or modify the `.pbix` report.
-* The availability and granularity of indicators depend on the underlying datasets.
+The platform has several important limitations that should be considered when interpreting its results.
+
+### 1. Historical / Provided Datasets
+
+The analysis depends on the datasets included in the project and does not represent a guaranteed real-time view of city transportation.
+
+### 2. Data Quality
+
+The quality of analytical results depends on the completeness, consistency, accuracy, and coverage of the source datasets.
+
+### 3. Correlation vs Causation
+
+Relationships visible between variables such as weather and traffic should not automatically be interpreted as causal relationships.
+
+### 4. Geographic Coverage
+
+The findings are dependent on the geographic coverage available within the underlying datasets.
+
+### 5. Dashboard-Level Analysis
+
+The project is primarily an analytical and visualization platform. It is not presented as a complete operational transportation management system.
+
+### 6. No Real-Time Claim
+
+The project should not be interpreted as a real-time traffic monitoring or live transportation control system unless connected to an external live data source.
 
 ---
 
-# 🔐 Data & Repository Notes
+# 🔮 Future Scope
 
-The repository contains datasets and project artifacts intended for analysis and demonstration.
+The platform can be extended in several directions.
 
-The main Power BI file is stored using **Git LFS** due to its size.
+## 📡 Real-Time Data Integration
+
+Future versions could connect live feeds from transportation and traffic systems.
+
+## 🤖 Predictive Analytics
+
+Historical data could be used for:
+
+* Traffic forecasting
+* Ridership forecasting
+* Demand prediction
+* Mobility trend prediction
+
+## 🗺️ Advanced Geospatial Analysis
+
+Future versions could introduce more detailed spatial analysis of:
+
+* Congestion hotspots
+* Transit accessibility
+* Station catchment areas
+* Mobility corridors
+
+## 📱 Mobile-Friendly Reporting
+
+Dashboards could be optimized for mobile users.
+
+## 🌐 Additional Cities
+
+The framework could be extended to cities such as:
+
+* Mumbai
+* Chennai
+* Hyderabad
+* Pune
+* Kolkata
+* Ahmedabad
+
+## 🔗 Additional Mobility Sources
+
+Future integrations could include:
+
+* Parking
+* Electric vehicles
+* Charging stations
+* Road incidents
+* Pedestrian mobility
+* Cycling infrastructure
 
 ---
 
-# 🧭 Project at a Glance
+# 📚 Project Resources
 
-<div align="center">
+The repository includes additional project documentation and presentation material.
 
-| Category                | Coverage |
-| :---------------------- | :------: |
-| 🏙️ Cities              |   **2**  |
-| 🚗 Traffic              |   **✅**  |
-| 🚌 Bus                  |   **✅**  |
-| 🚇 Metro                |   **✅**  |
-| 🚲 Bike Sharing         |   **✅**  |
-| 🌦️ Weather             |   **✅**  |
-| 👥 Demographics         |   **✅**  |
-| 🗺️ Geographic Analysis |   **✅**  |
-| 📊 Power BI             |   **✅**  |
-| 🧮 DAX                  |   **✅**  |
-| 🔄 Power Query          |   **✅**  |
-| 🐍 Python Preprocessing |   **✅**  |
-| 🚌 GTFS                 |   **✅**  |
-
-</div>
-
----
-
-# 🧠 From Data to Intelligence
+### 📄 Documentation
 
 ```text
-                 📥 DATA
-                   │
-                   ▼
-          🧹 PREPARATION
-                   │
-                   ▼
-             🔄 ETL
-                   │
-                   ▼
-           🗄️ DATA MODEL
-                   │
-                   ▼
-             🧮 DAX
-                   │
-                   ▼
-            📊 POWER BI
-                   │
-          ┌────────┼────────┐
-          ▼        ▼        ▼
-        🚗       🚌       🚇
-      Traffic   Transit   Metro
-          │        │        │
-          └────────┼────────┘
-                   │
-          ┌────────┼────────┐
-          ▼        ▼        ▼
-        🚲       🌦️       👥
-        Bike    Weather  Demographics
-          │        │        │
-          └────────┼────────┘
-                   ▼
-             🧠 INSIGHTS
-                   │
-                   ▼
-             🏙️ MOBILITY
-              INTELLIGENCE
+Documentation.docx
+```
+
+Contains supporting project documentation.
+
+### 📊 Presentation
+
+```text
+Presentation.pptx
+```
+
+Contains project presentation material.
+
+### 🖼️ Architecture Diagram
+
+```text
+Urban_Pulse_Architecture_Diagram.png
+```
+
+Provides a visual representation of the project architecture.
+
+### 📊 Power BI Report
+
+```text
+Smart-City Mobility-Intelligence-Platform-Final.pbix
+```
+
+Contains the interactive Power BI dashboards.
+
+---
+
+# 🏆 Project Highlights
+
+<p align="center">
+
+|           Capability           | Status |
+| :----------------------------: | :----: |
+|      🇮🇳 Delhi Analytics      |    ✅   |
+|    🇮🇳 Bengaluru Analytics    |    ✅   |
+|      🚦 Traffic Analytics      |    ✅   |
+|        🚌 Bus Analytics        |    ✅   |
+|       🚇 Metro Analytics       |    ✅   |
+|    🚕 Ride-Hailing Analytics   |    ✅   |
+|      🚲 Bike-Sharing Data      |    ✅   |
+|      🌦️ Weather Analytics     |    ✅   |
+|     👥 Demographic Analysis    |    ✅   |
+|  🗺️ Geographic Visualization  |    ✅   |
+|     📊 Executive Dashboards    |    ✅   |
+|       ⚖️ City Comparison       |    ✅   |
+|        🧮 DAX Analytics        |    ✅   |
+|         🔄 Power Query         |    ✅   |
+| 📈 Interactive Power BI Report |    ✅   |
+
+</p>
+
+---
+
+# 💼 Project Value
+
+The core value of the platform lies in bringing multiple urban mobility datasets into a single analytical environment.
+
+Instead of viewing traffic, public transportation, metro systems, weather, demographics, and shared mobility separately, the platform provides a consolidated view that allows users to investigate relationships and patterns across these dimensions.
+
+```text
+                     MULTIPLE DATASETS
+                            │
+                            ▼
+                 DATA PREPARATION
+                            │
+                            ▼
+                    DATA MODELING
+                            │
+                            ▼
+                    DAX ANALYTICS
+                            │
+                            ▼
+              ┌────────────────────────┐
+              │    POWER BI REPORT     │
+              └────────────┬───────────┘
+                           │
+             ┌─────────────┼─────────────┐
+             ▼             ▼             ▼
+          TRAFFIC        TRANSIT       METRO
+             │             │             │
+             └─────────────┼─────────────┘
+                           │
+                    SMART MOBILITY
+                           │
+                    ┌──────┴──────┐
+                    ▼             ▼
+              RIDE-HAILING   BIKE SHARING
+                    │             │
+                    └──────┬──────┘
+                           ▼
+                  EXECUTIVE INSIGHTS
+                           │
+                           ▼
+                 DELHI vs BENGALURU
 ```
 
 ---
 
-# 🏆 Project Outcome
+# 🔍 Why This Project Matters
 
-The project demonstrates an end-to-end Business Intelligence workflow:
+Urban transportation is a multi-dimensional problem.
 
-```text
-Multiple Urban Datasets
-          ↓
-Data Preparation
-          ↓
-Data Transformation
-          ↓
-Data Modeling
-          ↓
-DAX & KPI Development
-          ↓
-Interactive Power BI Dashboards
-          ↓
-Multimodal Mobility Analysis
-```
+Traffic congestion cannot be understood independently from:
 
-The final outcome is a unified analytical environment for exploring the mobility ecosystem of **Delhi and Bengaluru**.
+* Public transportation
+* Metro connectivity
+* Ride-hailing
+* Road infrastructure
+* Weather
+* Population
+* Geographic distribution
+
+This project demonstrates how **Business Intelligence and data visualization can bring these dimensions together** to support structured exploration of urban mobility.
 
 ---
 
 # 👨‍💻 Author
 
-<div align="center">
+**Suyash Agrawaal**
 
-## **Suyash Agrawaal**
-
-### Business Intelligence • Data Analytics • Power BI
-
-<br>
-
-[![GitHub](https://img.shields.io/badge/GitHub-littlestuart07-181717?style=for-the-badge\&logo=github)](https://github.com/littlestuart07)
-
-<br><br>
-
-**Smart Mobility • Data Intelligence • Better Cities**
-
-<br>
-
-⭐ **If you find this project useful, consider starring the repository.**
-
-</div>
+Smart City Mobility Intelligence Platform
 
 ---
 
-<div align="center">
+# ⭐ If You Find This Project Useful
 
-### 🚦 Smart City Mobility Intelligence Platform
+If this project is useful for learning about:
 
-**🇮🇳 Delhi  •  🇮🇳 Bengaluru**
+* Power BI
+* DAX
+* Power Query
+* Business Intelligence
+* Data Visualization
+* Smart Cities
+* Urban Mobility Analytics
 
-**Power BI • DAX • Power Query • Python • GTFS**
+consider giving the repository a ⭐.
 
-</div>
+---
+
+<p align="center">
+  <strong>Smart City Mobility Intelligence Platform</strong>
+  <br/>
+  Delhi • Bengaluru • Traffic • Transit • Metro • Ride-Hailing • Smart Mobility
+</p>
+
+<p align="center">
+  Built with ❤️ using Microsoft Power BI
+</p>
+```
+
+This version deliberately **does not mention Python** and is also safer for a viva because it avoids claiming AI/ML, real-time monitoring, predictive models, or other capabilities that aren't actually established by the project.
